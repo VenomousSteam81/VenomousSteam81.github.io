@@ -1,0 +1,27 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+.nav {
+	display: block;
+	height: 50px;
+	line-height: 25px;
+	background-color: #333;
+}
+
+.nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.nav li {
+	float: left; /* Or you can use display: inline; */
+}
+
+.nav li a {
+	display: inline-block;
+	text-align: center;
+	padding: 14px 16px;
+}
