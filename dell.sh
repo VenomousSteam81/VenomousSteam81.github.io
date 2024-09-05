@@ -30,8 +30,8 @@ tar xjf broadcom-wl-5.100.138.tar.bz2
 sudo b43-fwcutter -w "$FIRMWARE_INSTALL_DIR" broadcom-wl-5.100.138/linux/wl_apsta.o
 
 # modprobe things
-sudo modprobe -r b43 bcma
 sudo modprobe -r brcmsmac bcma
+sudo modprobe -r b43 bcma
 sudo modprobe -r wl
 sudo modprobe b43
 sudo modprobe brcmsmac
