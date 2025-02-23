@@ -11,7 +11,7 @@ dirs=("/home/chronos/user" "/home/chronos/user/MyFiles/Downloads")
 
 for homes in "${dirs[@]}"; do
   echo "Mounting: $homes"
-  /bin/mount $homes -o remount,rw,suid,dev,exec,atime,symfollow
+  /bin/mount $homes -o remount,rw,suid,dev,exec,symfollow
 done
 
 # Remount devices with proper permissions
@@ -32,7 +32,7 @@ for ddir in "$rdir"/*; do
   if [ -d "$ddir" ]; then
     if ! mountpoint -q "$ddir"; then
       echo "Mounting: $ddir"
-      mount -o remount,rw,suid,dev,exec,atime,symfollow "$ddir"
+      mount -o remount,rw,suid,dev,exec,symfollow "$ddir"
         if [ $? -ne 0 ]; then
           echo "Possibly fatal error when trying to remount $ddir."
           echo "Exiting now before any harm is done."
